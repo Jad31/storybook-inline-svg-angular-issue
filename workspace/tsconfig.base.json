@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@workspace/svg-layout": ["libs/svg-layout/src/index.ts"],
+      "@workspace/svg-part": ["libs/svg-part/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

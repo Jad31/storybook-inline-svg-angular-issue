@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/svg-part",
+  "sourceRoot": "libs/svg-part/src",
+  "prefix": "workspace",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/svg-part"],
+      "options": {
+        "project": "libs/svg-part/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/svg-part/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/svg-part/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/svg-part"],
+      "options": {
+        "jestConfig": "libs/svg-part/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/svg-part/src/**/*.ts",
+          "libs/svg-part/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

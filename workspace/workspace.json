@@ -1,4 +1,8 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "svg-layout": "libs/svg-layout",
+    "svg-layout-e2e": "apps/svg-layout-e2e",
+    "svg-part": "libs/svg-part"
+  }
 }

@@ -1,0 +1,28 @@
+{
+  "root": "apps/svg-layout-e2e",
+  "sourceRoot": "apps/svg-layout-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/svg-layout-e2e/cypress.json",
+        "devServerTarget": "svg-layout:storybook"
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "svg-layout:storybook:ci"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/svg-layout-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["svg-layout"]
+}

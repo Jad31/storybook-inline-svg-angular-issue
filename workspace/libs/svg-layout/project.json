@@ -1,0 +1,75 @@
+{
+  "projectType": "library",
+  "root": "libs/svg-layout",
+  "sourceRoot": "libs/svg-layout/src",
+  "prefix": "workspace",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/svg-layout"],
+      "options": {
+        "project": "libs/svg-layout/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/svg-layout/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/svg-layout/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/svg-layout"],
+      "options": {
+        "jestConfig": "libs/svg-layout/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/svg-layout/src/**/*.ts",
+          "libs/svg-layout/src/**/*.html"
+        ]
+      }
+    },
+    "storybook": {
+      "executor": "@nrwl/storybook:storybook",
+      "options": {
+        "uiFramework": "@storybook/angular",
+        "port": 4400,
+        "config": {
+          "configFolder": "libs/svg-layout/.storybook"
+        },
+        "projectBuildConfig": "svg-layout"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@nrwl/storybook:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "uiFramework": "@storybook/angular",
+        "outputPath": "dist/storybook/svg-layout",
+        "config": {
+          "configFolder": "libs/svg-layout/.storybook"
+        },
+        "projectBuildConfig": "svg-layout"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    }
+  },
+  "tags": []
+}
