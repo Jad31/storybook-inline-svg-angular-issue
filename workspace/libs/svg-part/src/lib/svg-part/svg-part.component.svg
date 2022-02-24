@@ -1,0 +1,7 @@
+<svg >
+	<polygon
+			(click)="emitClicked($event)"
+			[attr.points]="sPoint.x*sizeLogoRatio + ',' + sPoint.y*sizeLogoRatio + ' ' + tPoint.x*sizeLogoRatio + ',' + tPoint.y*sizeLogoRatio + ' ' + uPoint.x*sizeLogoRatio + ',' + uPoint.y*sizeLogoRatio + ' ' + vPoint.x*sizeLogoRatio + ',' + vPoint.y*sizeLogoRatio"
+			[attr.fill]="fillValueB"
+	/>
+</svg>

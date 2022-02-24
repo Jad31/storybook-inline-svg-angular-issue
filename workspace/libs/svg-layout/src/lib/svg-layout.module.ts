@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MyComponentComponent } from './my-component/my-component.component';
+import { SvgLayoutComponent } from './svg-layout/svg-layout.component';
+import {SvgPartModule} from '@workspace/svg-part'
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [CommonModule, SvgPartModule],
   declarations: [
-    MyComponentComponent
+    SvgLayoutComponent
   ],
+  exports: [SvgLayoutComponent]
 })
 export class SvgLayoutModule {}
