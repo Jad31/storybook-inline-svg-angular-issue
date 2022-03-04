@@ -1,11 +1,22 @@
-<svg [attr.viewBox]="viewbox.minx + ' ' + viewbox.miny + ' ' + viewbox.width + ' ' + viewbox.height">
-    <svg:g
-        workspace-svg-part
-        [sizeLogoRatio]="svgLogoRatio"
-        [fillValueB]="svgFillValueB"
-        [sPoint]="svgSPoint"
-        [tPoint]="svgTPoint"
-        [uPoint]="svgUPoint"
-        [vPoint]="svgVPoint"
-    />
+<svg
+  [attr.viewBox]="
+    viewbox.minx +
+    ' ' +
+    viewbox.miny +
+    ' ' +
+    viewbox.width +
+    ' ' +
+    viewbox.height
+  "
+>
+  <svg:g
+    workspace-svg-part
+    [sizeLogoRatio]="svgLogoRatio"
+    [fillValueB]="svgFillValueB"
+    [sPoint]="svgSPoint"
+    [tPoint]="svgTPoint"
+    [uPoint]="svgUPoint"
+    [vPoint]="svgVPoint"
+  />
+  <text x="10" y="10">My</text>
 </svg>
